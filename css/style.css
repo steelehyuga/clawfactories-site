@@ -190,11 +190,32 @@ h3 {
   background-size: 40px 40px;
 }
 
-.hero-content {
+.hero-split {
   position: relative;
   z-index: 1;
   padding-top: 100px;
   padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 560px;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pipeline-canvas {
+  width: 100%;
+  max-width: 480px;
+  height: 420px;
+  display: block;
 }
 
 .hero-tagline {
@@ -214,7 +235,6 @@ h3 {
 .hero-sub {
   color: var(--text-secondary);
   font-size: 1.125rem;
-  max-width: 560px;
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
@@ -618,10 +638,32 @@ h3 {
     padding: 100px 0;
   }
 
-  .hero-content {
+  .hero-split {
     padding-top: 140px;
     padding-bottom: 120px;
   }
+
+  .product-body {
+    grid-template-columns: 1fr auto;
+  }
+
+  .touchpoints {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+}
+
+/* Collapse hero to single column on tablet and below */
+@media (max-width: 899px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
 
   .genre-grid {
     grid-template-columns: repeat(3, 1fr);
