@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Publish an AI-Written Novel on Amazon KDP (Full Pipeline) | ClawFactories</title>
+  <meta name="description" content="A step-by-step guide to publishing AI-written novels on Amazon KDP using a multi-agent pipeline. Covers story generation, editing, cover design, and KDP submission.">
+  <meta name="keywords" content="AI novel writing, publish AI book KDP, AI KDP publishing, Amazon KDP AI, self publish AI novel, KDP novel factory">
+  <link rel="canonical" href="https://clawfactories.com/blog/how-to-publish-ai-novel-kdp.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-wrap { max-width: 740px; margin: 0 auto; padding: 80px 24px; }
+    .blog-wrap h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.1rem; color: #fff; line-height: 1.25; margin-bottom: 16px; }
+    .blog-meta { color: #666688; font-size: 0.9rem; margin-bottom: 48px; }
+    .blog-wrap h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: #fff; margin: 48px 0 16px; }
+    .blog-wrap h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; color: #ccccee; margin: 32px 0 12px; }
+    .blog-wrap p { color: #aaaacc; font-size: 1rem; line-height: 1.85; margin-bottom: 20px; }
+    .blog-wrap ul, .blog-wrap ol { color: #aaaacc; font-size: 1rem; line-height: 1.85; padding-left: 24px; margin-bottom: 20px; }
+    .blog-wrap li { margin-bottom: 8px; }
+    .blog-wrap strong { color: #fff; }
+    .blog-wrap a { color: #3B82F6; text-decoration: none; }
+    .blog-wrap code { background: #1e1e2e; color: #3B82F6; padding: 0.15rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    .blog-wrap table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    .blog-wrap th { background: #1a1a2a; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; padding: 10px 14px; text-align: left; border: 1px solid #2a2a3a; }
+    .blog-wrap td { color: #aaaacc; font-size: 0.95rem; padding: 10px 14px; border: 1px solid #1e1e2e; }
+    .callout { background: #13131A; border-left: 3px solid #3B82F6; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 32px 0; }
+    .callout p { margin: 0; color: #ccccdd; }
+    .back-link { display: inline-block; color: #3B82F6; font-size: 0.9rem; margin-bottom: 40px; text-decoration: none; }
+    .cta-box { background: #13131A; border: 1px solid #3B82F6; border-radius: 12px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Space Grotesk', sans-serif; color: #fff; font-size: 1.3rem; margin: 0 0 12px; }
+    .cta-box p { color: #8888aa; margin: 0 0 20px; font-size: 0.95rem; }
+    .btn-cta { display: inline-block; background: #3B82F6; color: #fff; text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; padding: 0.875rem 2rem; border-radius: 8px; }
+  </style>
+</head>
+<body style="background: #0A0A0F;">
+  <div class="blog-wrap">
+    <a href="/" class="back-link">← ClawFactories.com</a>
+
+    <h1>How to Publish an AI-Written Novel on Amazon KDP (Full Pipeline)</h1>
+    <p class="blog-meta">By ClawFactories · March 2026 · 12 min read</p>
+
+    <p>I've published two AI-written novels on Amazon KDP in the last 48 hours. Not rough drafts — fully edited, cover-designed, keyword-optimized novels ready for sale. This is a complete walkthrough of how that pipeline works.</p>
+
+    <p>This isn't a "paste into ChatGPT" guide. It's a proper multi-agent system that handles the full production workflow from story concept to KDP submission. Here's exactly how it works.</p>
+
+    <h2>Why Single-Prompt AI Novel Writing Fails</h2>
+
+    <p>The obvious approach — dump a prompt into an LLM and ask for a novel — doesn't work at scale. A 90,000-word novel is far beyond any context window. By chapter 15, the model has forgotten chapter 1. Characters drift. Plot threads disappear. The quality degrades noticeably.</p>
+
+    <p>The solution is agent specialization: instead of one AI trying to hold an entire novel in its head, you use multiple agents, each with a narrow, well-defined job.</p>
+
+    <h2>The Four-Agent Pipeline</h2>
+
+    <h3>1. The Writer Agent</h3>
+    <p>The Writer's job is simple: write one chapter at a time. Each time it runs, it receives:</p>
+    <ul>
+      <li>The full story bible (characters, world, plot structure, tone guidelines)</li>
+      <li>The previous chapter (for immediate continuity)</li>
+      <li>The current chapter outline (plot beats, emotional beats, scene goals)</li>
+    </ul>
+    <p>That's its entire context. No accumulated drift, no forgotten subplots. Every chapter starts fresh with everything it needs injected in. Target: 3,500–4,000 words per chapter, 25 chapters, ~90,000 words total.</p>
+
+    <h3>2. The Editor Agent</h3>
+    <p>The Editor reviews every 3 chapters as a batch. It checks against a detailed QC checklist:</p>
+    <ul>
+      <li><strong>Pacing</strong> — are scenes moving at the right speed for their emotional weight?</li>
+      <li><strong>Character voice consistency</strong> — does each character sound like themselves across chapters?</li>
+      <li><strong>Romance arc progression</strong> — is the relationship developing at the right pace?</li>
+      <li><strong>AI tell patterns</strong> — em-dash overuse (hard cap: 10/chapter), negation chains, repeated phrases</li>
+      <li><strong>Continuity</strong> — do character names, locations, and established facts stay consistent?</li>
+    </ul>
+    <p>If a batch fails QC, the Editor returns specific revision notes and the Writer rewrites the flagged sections. In our most recent project, chapter 8 failed on a continuity error — a character name used incorrectly in a flashback. Caught and fixed before it compounded.</p>
+
+    <h3>3. The Marketer Agent</h3>
+    <p>The Marketer handles everything Amazon-facing. It receives the story bible and chapter summaries, then produces:</p>
+    <ul>
+      <li>Amazon product description (optimized for conversion, not just description)</li>
+      <li>7 backend keywords (researched for actual search volume)</li>
+      <li>A+ content copy</li>
+      <li>Series tagline and positioning</li>
+    </ul>
+    <p>Keyword research matters here. For alien romance, the primary term "alien romance stories" pulls 51,024 searches/month on Amazon. That's the term the Marketer builds around — not generic phrases no one searches.</p>
+
+    <h3>4. The Orchestrator</h3>
+    <p>The Orchestrator coordinates everything. It maintains a project file that's the single source of truth — current chapter status, QC results, cover generation status, KDP submission checklist. Every agent reads from and writes to this file. Nothing falls through the cracks.</p>
+
+    <h2>Cover Generation Pipeline</h2>
+
+    <p>Covers are generated via the Replicate API using Flux, then composited with custom typography. The pipeline:</p>
+
+    <ol>
+      <li><strong>Generate 3 base art options</strong> — different compositions, same style directive (cinematic, genre-appropriate)</li>
+      <li><strong>Select the strongest composition</strong> — evaluate for face framing, negative space for title, overall mood</li>
+      <li><strong>Composite typography</strong> — Cinzel Bold for title (warm gold, #DAB050), IM Fell English Italic for tagline</li>
+      <li><strong>Build eBook JPG</strong> — 1600×2560px, 300 DPI equivalent</li>
+      <li><strong>Build paperback wrap PDF</strong> — full bleed, spine calculated at 0.002252 inches per page (white paper)</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>KDP Paperback tip:</strong> Get your actual page count from KDP's print calculator before finalizing the spine width. Your word processor's page count and KDP's print page count differ — sometimes significantly. Submit a draft first, get the KDP page count, recalculate the spine, then resubmit the final wrap.</p>
+    </div>
+
+    <h2>KDP Submission Checklist</h2>
+
+    <p>Before submitting, every book goes through a final checklist:</p>
+
+    <ul>
+      <li>Manuscript formatted as .docx with proper heading styles (Heading 1 for chapter titles)</li>
+      <li>Front matter: title page, copyright page, dedication</li>
+      <li>Back matter: author bio, series page</li>
+      <li>eBook cover: 1600×2560px JPG, under 50MB</li>
+      <li>Paperback interior: 6×9 trim, 0.5" margins, mirrored for print</li>
+      <li>Paperback wrap: full bleed PDF at correct spine width</li>
+      <li>Amazon description: formatted with HTML bold tags</li>
+      <li>7 keywords entered (not comma-separated — one per field)</li>
+      <li>Categories: 2 BISAC categories selected</li>
+      <li>KDP Select: enrolled (90-day exclusivity for Kindle Unlimited)</li>
+      <li>Pricing: $4.99 eBook (70% royalty tier), $14.99 paperback</li>
+    </ul>
+
+    <h2>The Economics</h2>
+
+    <table>
+      <tr><th>Item</th><th>Cost per book</th></tr>
+      <tr><td>Claude API (Writer + Editor, ~500k tokens)</td><td>~$15–18</td></tr>
+      <tr><td>Claude API (Marketer + Orchestrator)</td><td>~$3</td></tr>
+      <tr><td>Replicate cover generation (3–4 attempts)</td><td>~$2</td></tr>
+      <tr><td>KDP submission</td><td>$0</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>~$20</strong></td></tr>
+    </table>
+
+    <p>At $4.99 eBook with 70% royalty: $3.49 per sale. Break-even at 6 sales. A mid-performing romance title in a well-chosen niche can do 30–100 organic sales per month. The pipeline can produce another book while the first one is selling.</p>
+
+    <h2>What Actually Broke</h2>
+
+    <p>No pipeline runs perfectly the first time. Here's what we hit:</p>
+
+    <ul>
+      <li><strong>Chapter 8 continuity error</strong> — wrong character name in a flashback. Editor caught it. Revised.</li>
+      <li><strong>First cover attempt too dark</strong> — adjusted the generation prompt, regenerated. Third option was the one.</li>
+      <li><strong>Paperback wrap KDP rejection</strong> — spine width was slightly off. Recalculated using KDP's actual page count, resubmitted.</li>
+      <li><strong>Pacing issue in chapters 18–20</strong> — Editor flagged the climax as rushed. Writer expanded the key confrontation scene by ~600 words.</li>
+    </ul>
+
+    <p>All of these are solvable problems. The system catches them before they reach readers.</p>
+
+    <h2>Running This Yourself</h2>
+
+    <p>The KDP Novel Factory is this entire pipeline packaged as an OpenClaw skill. Install it, configure it with your pen name and preferences, and tell it what to publish. It handles the rest — story bible through KDP submission.</p>
+
+    <div class="cta-box">
+      <h3>KDP Novel Factory</h3>
+      <p>Four-agent publishing pipeline for OpenClaw. 9 genre packs included. $197 one-time.</p>
+      <a href="https://buy.stripe.com/6oU4gB5Kz4Nc3IV6kA7Vm00" class="btn-cta">Get the KDP Novel Factory →</a>
+    </div>
+
+    <p>The two books produced with this system — <em>The Cartographer's Compass</em> (Fantasy Romance, 95,161 words) and <em>The Wrong Star</em> (Sci-Fi Romance, 86,455 words) — are both in Amazon review as of late March 2026. I'll update this post when they go live with real sales data.</p>
+
+    <p><a href="/">← Back to ClawFactories.com</a></p>
+  </div>
+</body>
+</html>
