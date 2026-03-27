@@ -5,7 +5,7 @@ const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
 // Product key → R2 file mapping
 // Add new products here as they launch
 const PRODUCT_FILES = {
-  'KDP Novel Factory': 'kdp-novel-factory-v1.0.0.tar.gz',
+  'KDP Novel Factory': 'kdp-novel-factory-v2.0.0.tar.gz',
   // 'Puzzle Factory': 'puzzle-factory-v1.0.0.tar.gz',
 };
 
